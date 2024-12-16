@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Recetas</title>
+</head>
+<body>
+<h1>Buscar Recetas</h1>
+<form action="{{ url_for('search_recipes') }}" method="POST">
+    <label for="search_term">Buscar:</label>
+    <input type="text" id="search_term" name="search_term" required>
+    <button type="submit">Buscar</button>
+</form>
+
+{% if recipes %}
+<ul>
+    {% for recipe in recipes %}
+    <li>{{ recipe.name }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</body>
+</html>

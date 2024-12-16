@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Receta</title>
+</head>
+<body>
+<h1>Agregar Receta</h1>
+<form action="{{ url_for('create_recipe') }}" method="POST">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="ingredients">Ingredientes:</label>
+    <textarea id="ingredients" name="ingredients" required></textarea><br>
+
+    <label for="steps">Pasos:</label>
+    <textarea id="steps" name="steps" required></textarea><br>
+
+    <button type="submit">Guardar</button>
+</form>
+</body>
+</html>
